@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .summary-item {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-right: 10px;
+            color: white;
+            font-size: 1.2em;
+        }
+        .summary-item:last-child {
+            margin-right: 0;
+        }
+        .summary-item .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .summary-item.blue {
+            background-color: #4a90e2;
+        }
+        .summary-item.green {
+            background-color: #7ed321;
+        }
+        .summary-item.orange {
+            background-color: #f5a623;
+        }
+        .summary-item.red {
+            background-color: #d0021b;
+        }
+        .table-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table th, table td {
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+            width: 100%;
+        }
+        .progress {
+            background-color: #4caf50;
+            height: 100%;
+            width: 0;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="summary">
+            <div class="summary-item blue">
+                <div class="icon">&#9881;</div>
+                <div class="title">设备总数</div>
+                <div class="count">102,400</div>
+            </div>
+            <div class="summary-item green">
+                <div class="icon">&#9654;</div>
+                <div class="title">运行中</div>
+                <div class="count">81,212</div>
+            </div>
+            <div class="summary-item orange">
+                <div class="icon">&#9203;</div>
+                <div class="title">待机</div>
+                <div class="count">9,280</div>
+            </div>
+            <div class="summary-item red">
+                <div class="icon">&#9888;</div>
+                <div class="title">故障</div>
+                <div class="count">13,600</div>
+            </div>
+        </div>
+        <div class="table-container">
+            <h2>生产进度</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>工单编码</th>
+                        <th>订单编号</th>
+                        <th>客户名称</th>
+                        <th>产品编号</th>
+                        <th>产品名称</th>
+                        <th>规格型号</th>
+                        <th>单位</th>
+                        <th>生产进度</th>
+                        <th>需求日期</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>H124</td>
+                        <td></td>
+                        <td></td>
+                        <td>IF202406270002</td>
+                        <td>测试产品</td>
+                        <td>one</td>
+                        <td>one</td>
+                        <td><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></td>
+                        <td>2024-07-12</td>
+                    </tr>
+                    <tr>
+                        <td>MO202407050026</td>
+                        <td></td>
+                        <td></td>
+                        <td>IF202406270001</td>
+                        <td>成品</td>
+                        <td>m</td>
+                        <td>m</td>
+                        <td><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></td>
+                        <td>2024-07-17</td>
+                    </tr>
+                    <tr>
+                        <td>MO202407050028</td>
+                        <td></td>
+                        <td></td>
+                        <td>IF202406270002</td>
+                        <td>测试产品</td>
+                        <td>one</td>
+                        <td>one</td>
+                        <td><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></td>
+                        <td>2024-07-17</td>
+                    </tr>
+                    <tr>
+                        <td>MO202407050025</td>
+                        <td></td>
+                        <td></td>
+                        <td>IF20240629015</td>
+                        <td>成品1</td>
+                        <td>kg</td>
+                        <td>kg</td>
+                        <td><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></td>
+                        <td>2024-07-12</td>
+                    </tr>
+                    <tr>
+                        <td>MO202407050023</td>
+                        <td></td>
+                        <td></td>
+                        <td>IF20240628028</td>
+                        <td>苹果B</td>
+                        <td>kg</td>
+                        <td>kg</td>
+                        <td><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></td>
+                        <td>2024-07-03</td>
+                    </tr>
+                    <tr>
+                        <td>MO202407050022</td>
+                        <td>222</td>
+                        <td>222</td>
+                        <td>IF20240628027</td>
+                        <td>苹果A</td>
+                        <td>kg</td>
+                        <td>kg</td>
+                        <td><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></td>
+                        <td>2024-07-02</td>
+                    </tr>
+                    <tr>
+                        <td>MO202407060001</td>
+                        <td></td>
+                        <td></td>
+                        <td>IF20240630001</td>
+                        <td>K70</td>
+                        <td>m3</td>
+                        <td>m3</td>
+                        <td><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></td>
+                        <td>2024-07-02</td>
+                    </tr>
+                    <tr>
+                        <td>MO202407050018</td>
+                        <td></td>
+                        <td></td>
+                        <td>IF20240627003</td>
+                        <td>成品A</td>
+                        <td></td>
+                        <td></td>
+                        <td><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></td>
+                        <td>2024-07-07</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

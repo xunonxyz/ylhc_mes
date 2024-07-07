@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="ylhc_mes.list">
+      <field name="name">ylhc_mes list</field>
+      <field name="model">ylhc_mes.ylhc_mes</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ylhc_mes.action_window">
+      <field name="name">ylhc_mes window</field>
+      <field name="res_model">ylhc_mes.ylhc_mes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ylhc_mes.action_server">
+      <field name="name">ylhc_mes server</field>
+      <field name="model_id" ref="model_ylhc_mes_ylhc_mes"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="ylhc_mes" id="ylhc_mes.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ylhc_mes.menu_1" parent="ylhc_mes.menu_root"/>
+    <menuitem name="Menu 2" id="ylhc_mes.menu_2" parent="ylhc_mes.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ylhc_mes.menu_1_list" parent="ylhc_mes.menu_1"
+              action="ylhc_mes.action_window"/>
+    <menuitem name="Server to list" id="ylhc_mes" parent="ylhc_mes.menu_2"
+              action="ylhc_mes.action_server"/>
+-->
+  </data>
+</odoo>
